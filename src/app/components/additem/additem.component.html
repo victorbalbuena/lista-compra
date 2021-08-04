@@ -1,19 +1,19 @@
-<form action="">
+<form [formGroup]="magicianForm" (ngSubmit)="onSubmit()">
   <h2>Registrar un nuevo articulo</h2>
 
   <div>
     <label for="">Nombre del Artículo</label>
-    <input type="text" class="" id="title" (ngModel="title" )>
+    <input type="text" class="" id="title" formControlName="title">
   </div>
 
   <div>
     <label for="">Precio</label>
-    <input type="text" name="price" id="" (ngModel="price" )>
+    <input type="text" name="price" id="" formControlName="price">
   </div>
 
   <div>
     <label for="">Cantidad</label>
-    <input type="text" name="quantity" id="" (ngModel="quantity" )>
+    <input type="text" name="quantity" id="" formControlName="quantity">
   </div>
 
   <input type="submit" value="Crear">
